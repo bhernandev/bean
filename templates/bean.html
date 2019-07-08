@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <script type="text/javascript" src="{{url_for('static', filename='js/phaser.min.js')}}" /></script>
+    <script type="text/javascript">
+        var static_url = "{{url_for('bean.static', filename='')}}";
+        static_url = static_url.substring(1);
+    </script>
+    <script type="text/javascript" src="{{url_for('bean.static', filename='js/phaser.min.js')}}" /></script>
 </head>
 <body>
-    <script type="text/javascript" src="{{url_for('static', filename='js/bean.js')}}"></script>
+    <script type="text/javascript" src="{{url_for('bean.static', filename='js/bean.js')}}"></script>
 </body>
 </html>
